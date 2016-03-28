@@ -2,6 +2,7 @@
 
 define ( 'VIDEO_FOLDER_NAME', 'video_monitor' );
 define ( 'VIDEO_FILE_NAME_FORMAT', '/^[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}\.mp4$/');
+define ( 'HTTP_PORT', 8090 );
 
 class VideoFiles {
 	public $videoFolderName;
@@ -37,7 +38,8 @@ class Render {
 		$videoFiles = new VideoFiles;
 		$videoFiles->videoFolderName = VIDEO_FOLDER_NAME;
 		$server_name = $_SERVER['SERVER_NAME'];
-		echo "<h3><a href=https://$server_name/Camera_1>Live Stream</a></h3><br>";
+		$http_port = HTTP_PORT;
+		echo "<h3><a href=http://$server_name:$http_port/Camera_1>Live Stream</a></h3><br>";
 
 		foreach ( $videoFiles->getFileNames() as $key => $videoFile ) {
 			if ( $key > 0 ) {
