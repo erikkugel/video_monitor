@@ -1,7 +1,7 @@
 <?php
 
 define ( 'VIDEO_FOLDER_NAME', 'video_monitor' );
-define ( 'VIDEO_FILE_NAME_FORMAT', '/^[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}\.mp4$/');
+define ( 'VIDEO_FILE_NAME_FORMAT', '/^[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}-[0-9]{2}\.(mp4|avi)$/');
 define ( 'HTTP_PORT', 8090 );
 
 class VideoFiles {
